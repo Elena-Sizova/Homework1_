@@ -17,6 +17,8 @@ class App extends Component {
         { name: "Task 1", description: 'do task1', status: 'New', creationDate: '11/15/2022', updateDate: '11/16/2022', rise: true, id: 0 },
         { name: "Task 2", description: 'do task2', status: 'Done', creationDate: '11/14/2022', updateDate: '11/15/2022', rise: false, id: 1 },
         { name: "Task 3", description: 'do task3', status: 'New', creationDate: '11/13/2022', updateDate: '11/17/2022', rise: false, id: 2 },
+        { name: "Task 2", description: 'do task2', status: 'Done', creationDate: '11/14/2022', updateDate: '11/15/2022', rise: false, id: 3 },
+        { name: "Task 3", description: 'do task3', status: 'In progress', creationDate: '11/13/2022', updateDate: '11/17/2022', rise: false, id: 4 }
       ],
       term: '',
       filter: ''
