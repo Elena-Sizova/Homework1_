@@ -90,7 +90,6 @@ class App extends Component {
   }
 
   filterPost = (items, filter) => {
-    console.log('filter', filter);
 
     if (filter) {
       return items.filter(item => item.status === filter);
@@ -102,6 +101,24 @@ class App extends Component {
   onFilterSelect = (filter) => {
     this.setState({ filter });
     console.log(filter);
+  }
+
+  sortingTasksHandler = () => {
+    this.setState(({ data }) => {
+      const newArr = [...data];
+      newArr.sort(function (a, b) {
+        return new Date(b.creationDate) - new Date(a.creationDate);
+      })
+      return {
+        data: newArr
+      }
+    }
+    
+   )
+    // } else {
+    //   tasksList.sort(function (a, b) {
+    //     return new Date(a.date) - new Date(b.date);
+    //   });
   }
 
   render() {

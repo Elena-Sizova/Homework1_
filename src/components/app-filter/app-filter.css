@@ -1,4 +1,15 @@
 .btn-group {
   margin-top: 20px;
   background-color: #3d5a80;
+  width: 80%;
+}
+
+label {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.sort-date.form-select {
+  max-width: 30%;
 }

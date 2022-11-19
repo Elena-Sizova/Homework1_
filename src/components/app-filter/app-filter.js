@@ -1,5 +1,3 @@
-
-
 import './app-filter.css';
 
 const AppFilter = (props) => {
@@ -27,6 +25,11 @@ const AppFilter = (props) => {
   return (
     <div className="btn-group">
       {buttons}
+      <label>Sort by</label>
+        <select className="sort-date form-select">
+          <option value="Creation date increase">Creation date increase</option>
+          <option value="Сreation date decrease">Сreation date decrease</option>
+        </select>
     </div>
   );
 }

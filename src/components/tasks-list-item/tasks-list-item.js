@@ -1,4 +1,3 @@
-
 import "./tasks-list-item.css";
 
 const TasksListItem = (props) => {
@@ -8,7 +7,7 @@ const TasksListItem = (props) => {
   return (
     <li className="list-group-item d-flex justify-content-between">
       <span className='list-item-name'>{name}</span>
-      <input type="text" className="list-group-item-input" defaultValue={description} />
+      <span className='list-item-status'>{description}</span>
       <span className='list-item-status'>{status}</span>
       <span className='list-item-date'>{creationDate}</span>
       <span className='list-item-date'>{updateDate}</span>

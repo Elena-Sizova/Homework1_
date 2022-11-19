@@ -8,7 +8,7 @@ class TasksAddForm extends Component {
     this.state = {
       name: '',
       description: '',
-      status: ''
+      status: 'New'
     }
   }
 
@@ -20,12 +20,16 @@ class TasksAddForm extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    debugger;
     if (this.state.name.length < 3 || this.state.description.length < 3) return;
     this.props.onAdd(this.state.name, this.state.description, this.state.status);
     this.setState({
       name: '',
-      description: ''
+      description: '',
+      status: 'New'
     })
+    const statusSelected = document.querySelector('.form-select');
+    statusSelected.value = 'New';
   }
 
   render() {
