@@ -6,7 +6,8 @@ const AppFilter = (props) => {
   const buttonsData = [
     { name: '', label: 'All tasks' },
     { name: 'Done', label: 'Done' },
-    { name: 'In progress', label: 'In progress' }
+    { name: 'In progress', label: 'In progress' },
+    { name: 'New', label: 'New' }
   ];
 
   const buttons = buttonsData.map(({ name, label }) => {

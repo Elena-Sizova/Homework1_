@@ -1,7 +1,7 @@
 import TasksListItem from "../tasks-list-item/tasks-list-item";
 import './tasks-list.css';
 
-const TasksList = ({ data, onDelete, editItem, onToggleRise }) => {
+const TasksList = ({ data, onDelete, editItem }) => {
   const elements = data.map(item => {
     const { id, ...itemProps } = item;
     return (
@@ -10,7 +10,7 @@ const TasksList = ({ data, onDelete, editItem, onToggleRise }) => {
         {...itemProps}
         onDelete={() => onDelete(id)}
         // editItem={() => editItem(id)}
-        onToggleRise={() => onToggleRise(id)} />
+         />
     )
   })
   return (

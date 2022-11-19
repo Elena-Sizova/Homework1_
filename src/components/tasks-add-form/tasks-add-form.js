@@ -28,7 +28,6 @@ class TasksAddForm extends Component {
     })
   }
 
-
   render() {
     const { name, description } = this.state;
     return (
