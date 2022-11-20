@@ -1,6 +1,7 @@
 import './app-filter.css';
 
 const AppFilter = (props) => {
+
   const buttonsData = [
     { name: '', label: 'All tasks' },
     { name: 'Done', label: 'Done' },
@@ -20,16 +21,18 @@ const AppFilter = (props) => {
         {label}
       </button>
     )
-  })
+  });
 
   return (
     <div className="btn-group">
       {buttons}
       <label>Sort by</label>
-        <select className="sort-date form-select">
-          <option value="Creation date increase">Creation date increase</option>
-          <option value="Сreation date decrease">Сreation date decrease</option>
-        </select>
+      <select className="sort-date form-select" onChange={(e) => props.onSortSelect(e)}>
+        <option value="creationDateIncrease">Creation date increase</option>
+        <option value="creationDateDecrease">Сreation date decrease</option>
+        <option value="updateDateIncrease">Update date increase</option>
+        <option value="updateDateDecrease">Update date decrease</option>
+      </select>
     </div>
   );
 }
